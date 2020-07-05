@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import TopBar from './components/TopBar';
+import Routes from './routes';
+import Footer from './components/Footer';
+import Modal from './components/Modal';
+
+import './global.css';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState({});
+  const [showModal, setShowModal] = useState(false);
+  useState(() => {
+    setCurrentUser(JSON.parse(localStorage.getItem('currentUser')))
+  })
+  function showModalFunc() {
+    if (showModal)
+      return (<Modal cancel={() => { setShowModal(false) }} />);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <TopBar currentUser={currentUser} modal={() => { setShowModal(true) }} />
+      <Routes />
+      <Footer />
+      {showModalFunc()}
+    </BrowserRouter>
   );
 }
 

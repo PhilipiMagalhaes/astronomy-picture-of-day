@@ -1,0 +1,12 @@
+.notFound{
+ margin: auto;
+  background-color: white;
+  color: black;
+  height: 60vh;
+  width: 60vh;
+  text-align: center;
+}
+.notFound strong{
+ font: 700;
+ font-style: oblique;
+}

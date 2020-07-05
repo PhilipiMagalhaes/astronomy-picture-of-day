@@ -1,0 +1,33 @@
+
+.loginForm{
+  display: inline;
+  text-align: center;
+  color: #fff;
+}
+
+.loginForm h1{
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+
+.loginForm section{
+  display: grid;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.loginForm input{
+  position: relative;
+  width: 350px;
+  border-radius: 16px;
+  border: none;
+  background-color: var(--sub-color);
+  color: #fff;
+  font-size: medium;
+}
+
+.loginForm input::placeholder{
+  opacity: 1;
+  color: #fff;
+}

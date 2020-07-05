@@ -1,0 +1,68 @@
+.cardForm{
+  width: 80vh;
+  height: 80vh;
+  border-radius: 16px;
+  background: var(--primary-color);
+}
+
+.registerForm{
+  display: inline;
+  text-align: center;
+  color: #fff;
+}
+
+.registerForm h1{
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+
+.registerForm section{
+  display: grid;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.registerForm input{
+  position: relative;
+  width: 350px;
+  border-radius: 16px;
+  border: none;
+  background-color: var(--sub-color);
+  color: #fff;
+  font-size: medium;
+}
+
+.registerForm input::placeholder{
+  opacity: 1;
+  color: #fff;
+}
+
+.cardForm button{
+    position: relative;
+    width: 350px;
+    height: 40px;
+    display: inline-block;
+    left: 15.5vh;
+    border-radius: 12px;
+    border: none;
+    background-color: #fff;
+    color:var(--primary-color);
+    transition: 300ms;
+    margin-bottom: 12px;
+}
+
+.cardForm button:hover{
+background-color: #59974ddd;
+color: #fff;
+}
+
+.cardForm button.changeFormButton:hover{
+  background-color: var(--sub-color);
+  color: #fff;
+}
+
+.cardForm button.cancelButton:hover{
+  background-color: var(--negative-color);
+  color: #fff;
+}

@@ -1,0 +1,12 @@
+.footer{
+  text-align: center;
+  position: relative;
+  color: #fff;
+  min-width: 100%;
+  z-index: 2;
+
+}
+
+.footer a{
+  text-decoration: none;
+}

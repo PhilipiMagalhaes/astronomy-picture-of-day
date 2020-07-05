@@ -1,0 +1,50 @@
+.card{
+  background-color: white;
+  border-radius: 16px;
+  width: 200px;
+  height: 250px;
+  margin: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.card img{
+  width: 200px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+}
+
+.card button{
+  padding: 10px;
+  background-color: cornflowerblue;
+  border: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  bottom: 0;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  left: 0;
+  transition: 300ms;
+}
+
+.card iframe{
+  width: 200px;
+  height: 150px;
+  display: block;
+  border-radius: 16px;
+  border: none;
+}
+
+.explanation{
+  font: 100;
+  font-size: 13px;
+}
+
+.card button:hover{
+  background: #0e6ed4;
+}

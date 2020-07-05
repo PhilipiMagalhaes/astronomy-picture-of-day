@@ -1,0 +1,32 @@
+.APODiv{
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+
+.APODiv img{
+  width: 750px;
+  height: 420px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  border-radius: 16px;
+}
+
+a{
+  color: inherit;
+}
+
+.back-link{
+  position: absolute;
+  left: 0;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.APODiv iframe{
+  width: 720px;
+  height: 420px;
+  border-style: none;
+  border-radius: 16px;
+}
