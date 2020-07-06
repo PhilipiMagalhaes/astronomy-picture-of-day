@@ -3,6 +3,7 @@ import api from '../../services/api';
 import CardsContainer from '../../components/CardsContainer';
 import moment from 'moment';
 import dateToday from '../../utils/dateToday';
+
 import './styles.css';
 
 export default function Main() {
@@ -27,7 +28,16 @@ export default function Main() {
       getCards();
     }
     else {
-      setCards(JSON.parse(sessionStorage.getItem('sessionApods')))
+      const apods = JSON.parse(sessionStorage.getItem('sessionApods'));
+      let notToday = true;
+      apods.map(apod => {
+        if(apod.date === dateToday())
+        notToday = false;
+      })
+      if(notToday === true)
+      getCards();
+      else
+      setCards(apods);
     }
   }, [])
 
