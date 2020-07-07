@@ -7,7 +7,7 @@
   }
   .cardForm button{
     width: 75%;
-    margin-left: -5%;
+    margin-left:-5%;
   }
   
 }
@@ -60,7 +60,7 @@
     margin-left: 25%;
   }
   .cardForm button{
-    margin-left: -15%;
+    margin-left: -5%;
   }
 }
 
@@ -105,22 +105,26 @@
     width: 105%;
   }
   .cardForm button{
-    margin-left: -15%;
+    margin-left: -5%;
   }
   .userInformation button{
     margin-left:1%;
   }
 }
 
-@media screen and (min-aspect-ratio: 4/6){
+@media(max-width:400px){
   .cardForm button{
-    margin-left: -2%;
+    margin-left: -15%;
+    width: 80%;
   }
   .cardForm input{
-    width: 110%;
+    width: 120%;
+    margin-left: -5%;
   }
+}
+
+@media(max-width:399px){
   .cardForm button{
-    width: 60%;
+    margin-left: 1;
   }
-  
 }
