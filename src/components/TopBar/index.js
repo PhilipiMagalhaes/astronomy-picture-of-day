@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import logoImg from '../../assets/logo.png';
 import { MdAccountBox } from 'react-icons/md';
 import './styles.css';
-import Modal from '../Modal';
 
 export default function TopBar({ currentUser, modal}) {
   const history = useHistory();

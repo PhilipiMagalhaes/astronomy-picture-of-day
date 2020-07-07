@@ -7,8 +7,8 @@ import Profile from './pages/Profile';
 export default function Routes() {
   return (
     <Switch>
-      <Route path='/' exact component={APOD} />
-      <Route path='/test' component={Main} />
+      <Route path='/' exact component={Main} />
+      <Route path='/apod' component={APOD} />
       <Route path='/profile' component={Profile} />
     </Switch>
   )

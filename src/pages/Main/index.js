@@ -8,15 +8,14 @@ import './styles.css';
 
 export default function Main() {
   const [cards, setCards] = useState([]);
-  
+
   useEffect(() => {
     async function getCards() {
-      let date = dateToday();
       let arrayAPODs = [];
       for (let i = 0; i < 7; i++) {
         const response = await api.get('', {
           params: {
-            date: `${moment().subtract(i,'days').format('YYYY-MM-DD')}`
+            date: `${moment().subtract(i, 'days').format('YYYY-MM-DD')}`
           }
         });
         arrayAPODs.push(response.data);
@@ -31,13 +30,14 @@ export default function Main() {
       const apods = JSON.parse(sessionStorage.getItem('sessionApods'));
       let notToday = true;
       apods.map(apod => {
-        if(apod.date === dateToday())
-        notToday = false;
+        if (apod.date === dateToday()) {
+          notToday = false;
+        }
       })
-      if(notToday === true)
-      getCards();
+      if (notToday === true)
+        getCards();
       else
-      setCards(apods);
+        setCards(apods);
     }
   }, [])
 

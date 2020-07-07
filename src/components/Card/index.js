@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState} from 'react';
 import RenderMedia from '../RenderMedia';
 import { Link } from 'react-router-dom';
 import dateToday from '../../utils/dateToday';
@@ -8,7 +8,7 @@ import {store} from 'react-notifications-component';
 import './styles.css';
 
 export default function Card({ APOD, main, removeFunc }) {
-  const [currentAPOD, setCurrentAPOD] = useState(APOD);
+  const [currentAPOD] = useState(APOD);
 
   function addApod() {
       const user = JSON.parse(localStorage.getItem('currentUser'));
@@ -32,7 +32,7 @@ export default function Card({ APOD, main, removeFunc }) {
         title: 'Already added',
         insert: 'bottom',
         type: 'warning',
-        message: `'${APOD.title}' was added to your APODs previously`,
+        message: `'${APOD.title}' is already in your APODs`,
         container: 'bottom-right',
         dismiss: {
           duration: 3000,
@@ -98,10 +98,9 @@ export default function Card({ APOD, main, removeFunc }) {
   return (
     <div className='card'>
       <RenderMedia APOD={currentAPOD} />
-      <Link to='/'>
+      <Link to='/apod'>
         <p className='name'
           onClick={() => {
-            const date = dateToday();
             sessionStorage.setItem('dateApod', APOD.date);
           }}>{currentAPOD.title} </p>
       </Link>

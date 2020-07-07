@@ -17,8 +17,7 @@ a{
 }
 
 .back-link{
-  position: absolute;
-  left: 0;
+  position: relative;
   color: inherit;
   text-decoration: none;
   cursor: pointer;
@@ -29,18 +28,4 @@ a{
   height: 420px;
   border-style: none;
   border-radius: 16px;
-}
-
-@media(max-width:900px){
-  .APODiv img{
-    max-width: 450px;
-    max-height: 300px;
-  }
-  .APODiv iframe{
-    max-width: 450px;
-    max-height: 300px;
-  }
-  .topBar h1{
-    font-size: 20px;
-  }
 }

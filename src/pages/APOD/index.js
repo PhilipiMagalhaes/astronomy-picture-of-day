@@ -36,10 +36,10 @@ export default function APOD({ currentAPOD }) {
 
   return (
     <div className='APODiv'>
-      <Link className='back-link' to='/test'>
+      <Link className='back-link' to='/'>
         <TiArrowBack size={18} color='#fff' />To Main Page</Link>
 
-      <a href='/test'>Discover the cosmos!  </a><p>
+      <a href='/'>Discover the cosmos!  </a><p>
         Each day a different image or photograph of our fascinating universe is featured,
     along with a brief explanation written by a professional astronomer.</p>
       <RenderMedia APOD={APOD} />

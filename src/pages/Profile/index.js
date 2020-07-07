@@ -5,8 +5,6 @@ import saveUserInStorage from '../../utils/saveUserInStorage';
 import maxCharactersVerification from '../../utils/maxCharactersVerification';
 import './styles.css';
 
-
-
 export default function Profile() {
   const [user, setUser] = useState({});
   const [editing, setEditing] = useState(false);
@@ -15,23 +13,20 @@ export default function Profile() {
   const [changeButtonText, setChangeButtonText] = useState('Change my name');
   const history = useHistory();
 
-  if (user === undefined || user === null || user === {}) {
-    history.push('/');
-  }
   useEffect(() => {
-    function getUser() {
-      const user = JSON.parse(localStorage.getItem('currentUser'));
+    getUser()
+  },[])
+
+  function getUser() {
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    try {
       setUser(user);
       setName(user.name);
       setApods(user.APODS);
-    }
-    try {
-      getUser();
     } catch{
       history.push('/');
     }
-  }, [])
-
+  }
   function renderName(editing) {
     if (editing)
       return (
@@ -60,14 +55,14 @@ export default function Profile() {
       let currentUser = user;
       currentUser.name = name;
       setUser(currentUser);
-     saveUserInStorage(user);
+      saveUserInStorage(user);
       setEditing(false);
       window.location.reload();
     }
     if (editing === false) {
-      setEditing(true); 
+      setEditing(true);
       setChangeButtonText('Confirm');
-      
+
     }
   }
   return (
@@ -78,13 +73,13 @@ export default function Profile() {
         </div>
         <button onClick={() => { endNameEditing() }}>{changeButtonText}</button>
         <div className='logOut'>
-        <button className='logOutButton' onClick={()=>{
-          localStorage.removeItem('currentUser');
-          history.push('/');
-          window.location.reload();
-        }}>Log out</button>
+          <button className='logOutButton' onClick={() => {
+            localStorage.removeItem('currentUser');
+            history.push('/');
+            window.location.reload();
+          }}>Log out</button>
         </div>
-      
+
       </div>
 
       <div className='apodsContainer'>

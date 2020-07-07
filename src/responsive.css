@@ -1,0 +1,126 @@
+@media(max-width:1050px){
+  .cards{
+    display: block;
+  }
+  .todayContainer {
+  margin-bottom: 200px;
+  }
+  .cardForm button{
+    width: 75%;
+    margin-left: -5%;
+  }
+  
+}
+
+@media(max-width:1000px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .userInformation button {
+    width: 155px;
+  }
+  .logOut {
+    margin-left: 35%;
+  }
+  .userName input{
+    width: 85%;
+  }
+}
+
+@media(max-width:750px) {
+  .APODiv img {
+    max-width: 450px;
+    max-height: 300px;
+  }
+  .APODiv iframe {
+    max-width: 450px;
+    max-height: 300px;
+  }
+  .topBar h1 {
+    font-size: 20px;
+  }
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 5%;
+  }
+  .logOut {
+    margin-left: 5%;
+  }
+  .userInformation button {
+    width: 75px;
+  }
+  .userName{
+    width: 250px;
+    word-break: break-all;
+  }
+  .userName input{
+    width: 150%;
+  }
+  .todayContainer{
+    margin-left: 25%;
+  }
+  .cardForm button{
+    margin-left: -15%;
+  }
+}
+
+@media(max-width:500px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    margin-left: 20%;
+    margin-right: 0;
+  }
+  .userName input{
+    width: 120%;
+  }
+  .todayContainer{
+    margin-left: 10%;
+    margin-right: 0;
+  }
+  .topBar h1{
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  .topBar .profileIcon{
+    width: 0;
+  }
+  .APODiv img {
+    max-width: 95%;
+    max-height: 300px;
+    margin: 12px;
+  }
+  .APODiv iframe {
+    max-width: 95%;
+    max-height: 300px;
+    margin: 12px;
+  }
+  .back-link{
+    margin: 30px;
+    margin-left: 0 ;
+  }
+  .userInformation button{
+    margin-right: 12px;
+  }
+  .cardForm input{
+    width: 105%;
+  }
+  .cardForm button{
+    margin-left: -15%;
+  }
+  .userInformation button{
+    margin-left:1%;
+  }
+}
+
+@media screen and (min-aspect-ratio: 4/6){
+  .cardForm button{
+    margin-left: -2%;
+  }
+  .cardForm input{
+    width: 110%;
+  }
+  .cardForm button{
+    width: 60%;
+  }
+  
+}

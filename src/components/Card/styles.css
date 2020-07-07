@@ -19,7 +19,7 @@
 
 .card button{
   padding: 10px;
-  background-color: cornflowerblue;
+  background-color: var(--sub-color);
   border: none;
   font-weight: bold;
   color: white;
