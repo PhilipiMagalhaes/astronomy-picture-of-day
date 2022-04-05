@@ -43,7 +43,7 @@ export default function Main() {
 
   return (
     <div className='content'>
-      <h1 className='lastApodsText'>Last APODs</h1>
+      <h1 className='lastApodsText'>Lastest APODs</h1>
       <CardsContainer APODs={cards} main={true} />
     </div>
   );
