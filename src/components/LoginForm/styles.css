@@ -31,3 +31,12 @@
   opacity: 1;
   color: #fff;
 }
+
+.cardForm button {
+  position: inherit;
+}
+
+.cardForm {
+  text-align:center;
+  justify-content:center;
+}
