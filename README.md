@@ -2,8 +2,6 @@
 ## Save a different astronomy picture and a detailed explanation everyday !
 
 ### Developed using ReactJS ⚛
-to run on your personal server run `yarn start`
-*OR* go to [this address for the app already deployed on HEROKU.](https://astronomy-picture-of-day.herokuapp.com/)
 
 ## Here are some screenshots:
 ![APOD](https://github.com/PhilipiMagalhaes/astronomy-picture-of-day/blob/master/Screenshots/APOD.jpeg?)
